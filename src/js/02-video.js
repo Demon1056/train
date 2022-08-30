@@ -4,8 +4,7 @@ const iframe = document.querySelector('iframe');
 const player = new Player (iframe)
 
 function catchVideoTime (timeVideo)
-      { localStorage.setItem ("videoplayer-current-time", timeVideo.seconds); 
-        
+{ localStorage.setItem ("videoplayer-current-time", timeVideo.seconds); 
 };
 const delayCatchVideoTime = throttle(catchVideoTime , 1000)
 player.on('timeupdate', delayCatchVideoTime);
